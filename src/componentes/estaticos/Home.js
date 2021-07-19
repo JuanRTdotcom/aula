@@ -31,6 +31,12 @@ export default function Home(){
                         <div>
                             dos
                         </div>
+                        <div>
+                            cuatro
+                        </div>
+                        <div>
+                            tres
+                        </div>
                     </Carousel>
                 </div>
         </section>
