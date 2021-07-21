@@ -1,11 +1,11 @@
 import { Fragment } from 'react'
 import { Disclosure} from '@headlessui/react'
-import {  MenuIcon, XIcon , ShoppingCartIcon} from '@heroicons/react/outline'
+import {  MenuIcon, XIcon } from '@heroicons/react/outline'
 import { NavLink } from 'react-router-dom'
 
 
 const navigation = [
-  { name: 'Programas', href: 'Programas', current: false },
+  // { name: 'Programas', href: 'Programas', current: false },
 //   { name: 'Cursos', href: '#', current: false },
 //   { name: 'Comunidad', href: '#', current: false }
 ]
@@ -16,7 +16,7 @@ function classNames(...classes) {
 
 export default function menuHeader() {
   return (
-    <Disclosure as="nav" className="bg-gray-800 fixed w-full top-0" style={{background:'linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0.660937) 59.9%, rgba(0, 0, 0, 0.1) 100%)'}}>
+    <Disclosure as="nav" className="bg-gray-800 z-10 fixed w-full top-0" style={{background:'#141416'}}>
       {({ open }) => (
         <>
           <div className="container mx-auto px-2">
@@ -66,14 +66,14 @@ export default function menuHeader() {
                 </div>
               </div>
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                <button className="bg-gray-800 p-1 rounded-full text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
+                {/* <button className="bg-gray-800 p-1 rounded-full text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
                   <ShoppingCartIcon className="h-6 w-6" aria-hidden="true" />
+                </button> */}
+                <button className="bg-transparent p-1">
+                  <span className="text-gray-300 hover:bg-gray-900 hover:text-white px-3 py-2 rounded-md text-sm font-normal">Ingresar</span>
                 </button>
-                <button className="bg-gray-800 p-1 rounded-full text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
-                  <span className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-normal">Ingresar</span>
-                </button>
-                <button className="bg-gray-800 p-1 rounded-full text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
-                  <span className="text-white hover:bg-green-600 px-3 py-2 rounded-full text-sm font-medium bg-green-500 transition duration-200">Registrarse</span>
+                <button className="bg-transparent p-1">
+                  <span className="text-white hover:bg-green-600 px-3 py-2 rounded-md text-sm font-light bg-green-500 transition duration-200">Registrarse</span>
                 </button>
 
                 {/* Profile dropdown */}

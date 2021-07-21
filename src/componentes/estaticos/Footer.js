@@ -4,7 +4,7 @@ import {  } from '@iconscout/react-unicons'
 export default function Footer(){
     return (
         <>
-   <footer className="pt-10 sm:mt-10 pt-10" style={{background:'#EDEDED'}}>
+   <footer className="pt-10 pt-10" style={{background:'#EDEDED'}}>
     <div className="container mx-auto text-gray-900 flex flex-wrap justify-left">
         
         <div className="p-5 w-1/2 sm:w-4/12 md:w-3/12 titulosFooter">
