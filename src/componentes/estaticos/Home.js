@@ -15,7 +15,7 @@ export default function Home(){
             
                 <div className="container mx-auto text-proper px-2" style={{fontSize:'52px',color:'#1EBE66',fontWeight:'900'}}>
                     APRENDE CON <br></br>
-                    LOS EXPERTOS
+                    LOS EXPERTOSssss
                 </div>
             
         </section>
