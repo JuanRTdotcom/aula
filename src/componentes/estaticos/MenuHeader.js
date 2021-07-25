@@ -1,7 +1,8 @@
-import { Fragment } from 'react'
+import React , { Fragment, forwardRef, useImperativeHandle, useState,useRef } from 'react'
 import { Disclosure} from '@headlessui/react'
-import {  MenuIcon, XIcon } from '@heroicons/react/outline'
+import { MenuIcon, XIcon } from '@heroicons/react/outline'
 import { NavLink } from 'react-router-dom'
+import { motion , AnimatePresence } from 'framer-motion'
 
 
 const navigation = [
@@ -10,15 +11,115 @@ const navigation = [
 //   { name: 'Comunidad', href: '#', current: false }
 ]
 
+const ModalLogin = forwardRef((props,ref)=>{
+  const [open, setOpen] = useState(false)
+
+  useImperativeHandle(ref,()=>{
+      return {
+          open:() => setOpen(true),
+          close:() => setOpen(false)
+      }
+  })
+
+  return(
+          <AnimatePresence>
+              {open && (                    
+                  <>
+                      <motion.div 
+                          initial={{
+                              opacity : 0
+                          }}
+                          animate={{
+                              opacity : 1,
+                              transition:{
+                                  duration: 0.3
+                              }
+                          }}
+                          exit = {{
+                              opacity : 0
+                              
+                          }}
+                          onClick={()=>setOpen(false)}
+                          class="container mx-auto">
+                              <div class="flex justify-center px-6 my-12">
+                                  
+                                  <div class="w-full xl:w-3/4 lg:w-11/12 flex">
+                                  
+                                      <div
+                                          class="w-full h-auto bg-gray-400 hidden lg:block lg:w-1/2 bg-cover rounded-l-lg"
+                                          style={{backgroundImage: "url('https://source.unsplash.com/oWTW-jNGl9I/600x800'"}}
+                                      ></div>
+                                      
+                                      <div class="w-full lg:w-1/2 bg-white p-5 rounded-lg lg:rounded-l-none">
+                                          <div class="px-8 mb-4 text-center">
+                                              <h3 class="pt-4 mb-2 text-2xl">Forgot Your Password?</h3>
+                                              <p class="mb-4 text-sm text-gray-700">
+                                                  We get it, stuff happens. Just enter your email address below and we'll send you a
+                                                  link to reset your password!
+                                              </p>
+                                          </div>
+                                          <form class="px-8 pt-6 pb-8 mb-4 bg-white rounded">
+                                              <div class="mb-4">
+                                                  <label class="block mb-2 text-sm font-bold text-gray-700" for="email">
+                                                      Email
+                                                  </label>
+                                                  <input
+                                                      class="w-full px-3 py-2 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+                                                      id="email"
+                                                      type="email"
+                                                      placeholder="Enter Email Address..."
+                                                  />
+                                              </div>
+                                              <div class="mb-6 text-center">
+                                                  <button
+                                                      class="w-full px-4 py-2 font-bold text-white bg-red-500 rounded-full hover:bg-red-700 focus:outline-none focus:shadow-outline"
+                                                      type="button"
+                                                  >
+                                                      Reset Password
+                                                  </button>
+                                              </div>
+                                              <hr class="mb-6 border-t" />
+                                              <div class="text-center">
+                                                  <a
+                                                      class="inline-block text-sm text-blue-500 align-baseline hover:text-blue-800"
+                                                      href="./register.html"
+                                                  >
+                                                      Create an Account!
+                                                  </a>
+                                              </div>
+                                              <div class="text-center">
+                                                  <a
+                                                      class="inline-block text-sm text-blue-500 align-baseline hover:text-blue-800"
+                                                      href="./index.html"
+                                                  >
+                                                      Already have an account? Login!
+                                                  </a>
+                                              </div>
+                                          </form>
+                                      </div>
+                                  </div>
+                              </div>
+                          </motion.div>
+                  </>
+              )}
+
+          </AnimatePresence>
+  )
+})
+
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-export default function menuHeader() {
+export default function MenuHeader() {
+
+  const modalRef = useRef()
+
   return (
     <Disclosure as="nav" className="bg-gray-800 z-10 fixed w-full top-0" style={{background:'#141416'}}>
       {({ open }) => (
         <>
+       
           <div className="container mx-auto px-2">
             <div className="relative flex items-center justify-between h-16">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -72,10 +173,12 @@ export default function menuHeader() {
                 <button className="bg-transparent p-1">
                   <span className="text-gray-300 hover:bg-gray-900 hover:text-white px-3 py-2 rounded-md text-sm font-normal">Ingresar</span>
                 </button>
-                <button className="bg-transparent p-1">
-                  <span className="text-white hover:bg-green-600 px-3 py-2 rounded-md text-sm font-light bg-green-500 transition duration-200">Registrarse</span>
+                <button onClick={()=> modalRef.current.open()} className="bg-transparent p-1">
+                  <span className="text-white hover:bg-green-600 px-3 py-2 rounded-md text-sm font-light bg-green-500 transition duration-200" 
+                  
+                  >Registrarse</span>
                 </button>
-
+                
                 {/* Profile dropdown */}
                 {/* <Menu as="div" className="ml-3 relative">
                   {({ open }) => (
@@ -151,7 +254,7 @@ export default function menuHeader() {
               </div>
             </div>
           </div>
-       
+          <ModalLogin ref={modalRef}/>
           <Disclosure.Panel className="sm:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1">
               {navigation.map((item) => (

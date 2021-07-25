@@ -1,3 +1,4 @@
+import React  from 'react'
 import Carousel from 'react-elastic-carousel'
 import { motion } from 'framer-motion'
 
@@ -8,10 +9,19 @@ const breakPoints = [
     {width:1200 , itemsToShow : 4},
 
 ]
-const Example = () => {
+
+
+
+export default function Home(){
+    
+  
+
     return(
         <>
-                <motion.div
+        
+        <section className="mx-auto w-100 flex items-center" style={{minHeight:'760px' ,backgroundImage:'url(https://res.cloudinary.com/proper/image/upload/v1626041274/aulavirtual/fondoproperaula_ixfx68.jpg)',backgroundPosition:'center center',backgroundSize: 'cover'}}>
+            
+        <motion.div
                     initial={{
                         opacity:0
                     }}
@@ -24,17 +34,6 @@ const Example = () => {
                     APRENDE CON <br></br>
                     LOS EXPERTOS
                 </motion.div>
-        </>
-    )
-}
-
-export default function Home(){
-    
-    return(
-        <>
-        <section className="mx-auto w-100 flex items-center" style={{minHeight:'760px' ,backgroundImage:'url(https://res.cloudinary.com/proper/image/upload/v1626041274/aulavirtual/fondoproperaula_ixfx68.jpg)',backgroundPosition:'center center',backgroundSize: 'cover'}}>
-            
-               <Example/>
             
         </section>
         <section className="mx-auto w-100 pt-16 pb-20" style={{backgroundPosition:'center center',backgroundSize:'120% auto',backgroundImage:'#F2F2F2'}}>            
