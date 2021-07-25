@@ -46,8 +46,8 @@ export default function Home(){
                             <div className="mx-auto px-4   max-w-xl  ">
                                 <div className="bg-white  cursor-pointer rounded-lg mb-6 tracking-wide" >
                                     <motion.div
-                                    whileHover={{ backgroundSize: '110% auto' }}
-                                    className="md:flex-shrink-0 w-full h-48 rounded-lg rounded-b-none object-cover" style={{backgroundPosition:'center center',backgroundSize:'100% auto',backgroundImage:'url(https://res.cloudinary.com/proper/image/upload/v1626450149/aulavirtual/im1_x7ddgq.jpg)'}}>
+                                    whileHover={{ backgroundSize: 'auto 105%' }}
+                                    className="md:flex-shrink-0 w-full h-48 rounded-lg rounded-b-none object-cover" style={{backgroundPosition:'center center',backgroundSize:'auto 120%',backgroundImage:'url(https://res.cloudinary.com/proper/image/upload/v1626450149/aulavirtual/im1_x7ddgq.jpg)'}}>
                                         {/* <img src="https://res.cloudinary.com/proper/image/upload/v1626450149/aulavirtual/im1_x7ddgq.jpg" alt="mountains" className=""/> */}
                                     </motion.div>
                                     <div className="px-4 py-2 mt-1">
@@ -101,8 +101,8 @@ export default function Home(){
                             <div className="mx-auto px-4   max-w-xl  ">
                                 <div className="bg-white  cursor-pointer rounded-lg mb-6 tracking-wide" >
                                     <motion.div
-                                         whileHover={{ backgroundSize: '110% auto' }}
-                                        className="md:flex-shrink-0 w-full h-48 rounded-lg rounded-b-none object-cover" style={{backgroundPosition:'center center',backgroundSize:'100% auto',backgroundImage:'url(https://res.cloudinary.com/proper/image/upload/v1626450237/aulavirtual/img2_abud5r.jpg)'}}>
+                                         whileHover={{ backgroundSize: 'auto 105%' }}
+                                        className="md:flex-shrink-0 w-full h-48 rounded-lg rounded-b-none object-cover" style={{backgroundPosition:'center center',backgroundSize:'auto 120%',backgroundImage:'url(https://res.cloudinary.com/proper/image/upload/v1626450237/aulavirtual/img2_abud5r.jpg)'}}>
                                         
                                     </motion.div>
                                     <div className="px-4 py-2 mt-1">
@@ -157,8 +157,8 @@ export default function Home(){
                                 <div className="bg-white  cursor-pointer rounded-lg mb-6 tracking-wide" >
                                     
                                     <motion.div
-                                     whileHover={{ backgroundSize: '110% auto' }}
-                                    className="md:flex-shrink-0 w-full h-48 rounded-lg rounded-b-none object-cover" style={{backgroundPosition:'center center',backgroundSize:'100% auto',backgroundImage:'url(https://res.cloudinary.com/proper/image/upload/v1626450288/aulavirtual/img3_cejyhd.jpg)'}}>
+                                     whileHover={{ backgroundSize: 'auto 105%' }}
+                                    className="md:flex-shrink-0 w-full h-48 rounded-lg rounded-b-none object-cover" style={{backgroundPosition:'center center',backgroundSize:'auto 120%',backgroundImage:'url(https://res.cloudinary.com/proper/image/upload/v1626450288/aulavirtual/img3_cejyhd.jpg)'}}>
                                         
                                     </motion.div>
                                     <div className="px-4 py-2 mt-1">
@@ -212,8 +212,8 @@ export default function Home(){
                             <div className="mx-auto px-4   max-w-xl  ">
                                 <div className="bg-white  cursor-pointer rounded-lg mb-6 tracking-wide" >
                                     <motion.div
-                                     whileHover={{ backgroundSize: '110% auto' }}
-                                    className="md:flex-shrink-0 w-full h-48 rounded-lg rounded-b-none object-cover" style={{backgroundPosition:'center center',backgroundSize:'100% auto',backgroundImage:'url(https://res.cloudinary.com/proper/image/upload/v1626450492/aulavirtual/img4_bfweqx.jpg)'}}>
+                                     whileHover={{ backgroundSize: 'auto 105%' }}
+                                    className="md:flex-shrink-0 w-full h-48 rounded-lg rounded-b-none object-cover" style={{backgroundPosition:'center center',backgroundSize:'auto 120%',backgroundImage:'url(https://res.cloudinary.com/proper/image/upload/v1626450492/aulavirtual/img4_bfweqx.jpg)'}}>
                                         
                                     </motion.div>
                                    
@@ -268,8 +268,8 @@ export default function Home(){
                             <div className="mx-auto px-4   max-w-xl  ">
                                 <div className="bg-white  cursor-pointer rounded-lg mb-6 tracking-wide" >
                                      <motion.div 
-                                      whileHover={{ backgroundSize: '110% auto' }}
-                                     className="md:flex-shrink-0 w-full h-48 rounded-lg rounded-b-none object-cover" style={{backgroundPosition:'center center',backgroundSize:'100% auto',backgroundImage:'url(https://res.cloudinary.com/proper/image/upload/v1626450288/aulavirtual/img3_cejyhd.jpg)'}}>
+                                      whileHover={{ backgroundSize: 'auto 105%' }}
+                                     className="md:flex-shrink-0 w-full h-48 rounded-lg rounded-b-none object-cover" style={{backgroundPosition:'center center',backgroundSize:'auto 120%',backgroundImage:'url(https://res.cloudinary.com/proper/image/upload/v1626450288/aulavirtual/img3_cejyhd.jpg)'}}>
                                         
                                     </motion.div>
                                    
@@ -324,8 +324,8 @@ export default function Home(){
                             <div className="mx-auto px-4   max-w-xl  ">
                                 <div className="bg-white  cursor-pointer rounded-lg mb-6 tracking-wide" >
                                     <motion.div
-                                     whileHover={{ backgroundSize: '110% auto' }}
-                                    className="md:flex-shrink-0 w-full h-48 rounded-lg rounded-b-none object-cover" style={{backgroundPosition:'center center',backgroundSize:'100% auto',backgroundImage:'url(https://res.cloudinary.com/proper/image/upload/v1626450237/aulavirtual/img2_abud5r.jpg)'}}>
+                                     whileHover={{ backgroundSize: 'auto 105%' }}
+                                    className="md:flex-shrink-0 w-full h-48 rounded-lg rounded-b-none object-cover" style={{backgroundPosition:'center center',backgroundSize:'auto 120%',backgroundImage:'url(https://res.cloudinary.com/proper/image/upload/v1626450237/aulavirtual/img2_abud5r.jpg)'}}>
                                         
                                     </motion.div>
                                     <div className="px-4 py-2 mt-1">

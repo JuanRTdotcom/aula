@@ -25,7 +25,25 @@ const ModalLogin = forwardRef((props,ref)=>{
           <AnimatePresence>
               {open && (                    
                   <>
-                      <motion.div 
+                      <motion.div
+                      initial={{
+                        opacity : 0
+                    }}
+                    animate={{
+                        opacity : 1,
+                        transition:{
+                            duration: 0.3
+                        }
+                    }}
+                    exit = {{
+                        opacity : 0
+                        
+                    }}                    
+                    onClick={()=>setOpen(false)}
+                      className="fondoModal">
+                        
+                      </motion.div>
+                      <motion.div  
                           initial={{
                               opacity : 0
                           }}
@@ -39,57 +57,69 @@ const ModalLogin = forwardRef((props,ref)=>{
                               opacity : 0
                               
                           }}
-                          onClick={()=>setOpen(false)}
-                          class="container mx-auto">
-                              <div class="flex justify-center px-6 my-12">
+                          className="container ModalLogin mx-auto">
+                              <div className="flex justify-center">
                                   
-                                  <div class="w-full xl:w-3/4 lg:w-11/12 flex">
+                                  <div className="w-full xl:w-3/4 lg:w-11/12 flex">
                                   
                                       <div
-                                          class="w-full h-auto bg-gray-400 hidden lg:block lg:w-1/2 bg-cover rounded-l-lg"
-                                          style={{backgroundImage: "url('https://source.unsplash.com/oWTW-jNGl9I/600x800'"}}
+                                          className="w-full h-auto bg-gray-400 hidden lg:block lg:w-1/2 bg-cover rounded-l-lg"
+                                          style={{backgroundImage: "url('https://res.cloudinary.com/proper/image/upload/v1627239355/aulavirtual/loginImagen_hgnxf8.jpg'"}}
                                       ></div>
                                       
-                                      <div class="w-full lg:w-1/2 bg-white p-5 rounded-lg lg:rounded-l-none">
-                                          <div class="px-8 mb-4 text-center">
-                                              <h3 class="pt-4 mb-2 text-2xl">Forgot Your Password?</h3>
-                                              <p class="mb-4 text-sm text-gray-700">
-                                                  We get it, stuff happens. Just enter your email address below and we'll send you a
-                                                  link to reset your password!
+                                      <div className="w-full lg:w-1/2 p-5 rounded-lg lg:rounded-l-none" style={{background:'#EDEBEB'}}>
+                                          <div className="px-8 mb-4 text-center">
+                                              <h3 className="pt-4 mb-2 text-2xl">Registrarse</h3>
+                                              <p className="mb-4 text-sm text-gray-700">
+                                                  o registrarse mediante su email
                                               </p>
                                           </div>
-                                          <form class="px-8 pt-6 pb-8 mb-4 bg-white rounded">
-                                              <div class="mb-4">
-                                                  <label class="block mb-2 text-sm font-bold text-gray-700" for="email">
-                                                      Email
-                                                  </label>
-                                                  <input
-                                                      class="w-full px-3 py-2 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
-                                                      id="email"
-                                                      type="email"
-                                                      placeholder="Enter Email Address..."
-                                                  />
+                                          <form className="px-8 pt-6 pb-8 mb-4 bg-white rounded">
+                                              
+                                              <div class="flex my-4">
+                                                <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center mdi mdi-account-outline text-gray-400 text-lg">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                                                    </svg>                                                    
+                                                 </div>
+                                                 <input type="text" class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="Nombre"/>
                                               </div>
-                                              <div class="mb-6 text-center">
+                                              <div class="flex my-4">
+                                                <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center mdi mdi-account-outline text-gray-400 text-lg">
+                                                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                                  </svg>                                                
+                                                 </div>
+                                                 <input type="text" class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="E-mail"/>
+                                              </div>
+                                              <div class="flex my-4">
+                                                <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center mdi mdi-account-outline text-gray-400 text-lg">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                                                    </svg>                                               
+                                                 </div>
+                                                 <input type="text" class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="Contraseña"/>
+                                              </div>
+                                              <div className="mb-6 text-center">
                                                   <button
-                                                      class="w-full px-4 py-2 font-bold text-white bg-red-500 rounded-full hover:bg-red-700 focus:outline-none focus:shadow-outline"
+                                                      className="w-full px-4 py-2 font-bold text-white bg-red-500 rounded-full hover:bg-red-700 focus:outline-none focus:shadow-outline"
                                                       type="button"
                                                   >
                                                       Reset Password
                                                   </button>
                                               </div>
-                                              <hr class="mb-6 border-t" />
-                                              <div class="text-center">
+                                              <hr className="mb-6 border-t" />
+                                              <div className="text-center">
                                                   <a
-                                                      class="inline-block text-sm text-blue-500 align-baseline hover:text-blue-800"
+                                                      className="inline-block text-sm text-blue-500 align-baseline hover:text-blue-800"
                                                       href="./register.html"
                                                   >
                                                       Create an Account!
                                                   </a>
                                               </div>
-                                              <div class="text-center">
+                                              <div className="text-center">
                                                   <a
-                                                      class="inline-block text-sm text-blue-500 align-baseline hover:text-blue-800"
+                                                      className="inline-block text-sm text-blue-500 align-baseline hover:text-blue-800"
                                                       href="./index.html"
                                                   >
                                                       Already have an account? Login!
