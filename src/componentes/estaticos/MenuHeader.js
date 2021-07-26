@@ -74,7 +74,7 @@ const ModalLogin = forwardRef((props,ref)=>{
                                                   o registrarse mediante su email
                                               </p>
                                           </div>
-                                          <form className="px-8 pt-6 pb-8 mb-4 bg-white rounded">
+                                          <form className="px-8 pt-6 pb-8 mb-4 bg-transparent rounded">
                                               
                                               <div class="flex my-4">
                                                 <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center mdi mdi-account-outline text-gray-400 text-lg">
@@ -102,10 +102,10 @@ const ModalLogin = forwardRef((props,ref)=>{
                                               </div>
                                               <div className="mb-6 text-center">
                                                   <button
-                                                      className="w-full px-4 py-2 font-bold text-white bg-red-500 rounded-full hover:bg-red-700 focus:outline-none focus:shadow-outline"
+                                                      className="w-full px-4 py-2 font-bold text-white bg-green-500 rounded-full hover:bg-green-700 focus:outline-none focus:shadow-outline"
                                                       type="button"
                                                   >
-                                                      Reset Password
+                                                      Registrarse
                                                   </button>
                                               </div>
                                               <hr className="mb-6 border-t" />
