@@ -1,6 +1,6 @@
 import React , { Fragment, forwardRef, useImperativeHandle, useState,useRef } from 'react'
 import { Disclosure} from '@headlessui/react'
-import { MenuIcon, XIcon } from '@heroicons/react/outline'
+import { MenuIcon, XIcon,ShoppingCartIcon } from '@heroicons/react/outline'
 import { NavLink } from 'react-router-dom'
 import { motion , AnimatePresence } from 'framer-motion'
 
@@ -12,6 +12,8 @@ const navigation = [
 ]
 
 const ModalLogin = forwardRef((props,ref)=>{
+
+
   const [open, setOpen] = useState(false)
 
   useImperativeHandle(ref,()=>{
@@ -69,7 +71,7 @@ const ModalLogin = forwardRef((props,ref)=>{
                                       
                                       <div className="w-full lg:w-1/2 p-5 rounded-lg lg:rounded-l-none" style={{background:'#EDEBEB'}}>
                                           <div className="px-8 mb-4 text-center">
-                                              <h3 className="pt-4 mb-2 text-2xl">Registrarse</h3>
+                                              <h3 className="pt-4 mb-2 text-2xl"  >Registrarse</h3>
                                               <p className="mb-4 text-sm text-gray-700">
                                                   o registrarse mediante su email
                                               </p>
@@ -109,22 +111,22 @@ const ModalLogin = forwardRef((props,ref)=>{
                                                   </button>
                                               </div>
                                               <hr className="mb-6 border-t" />
-                                              <div className="text-center">
+                                              {/* <div className="text-center">
                                                   <a
                                                       className="inline-block text-sm text-blue-500 align-baseline hover:text-blue-800"
                                                       href="./register.html"
                                                   >
                                                       Create an Account!
                                                   </a>
-                                              </div>
-                                              <div className="text-center">
+                                              </div> */}
+                                              {/* <div className="text-center">
                                                   <a
                                                       className="inline-block text-sm text-blue-500 align-baseline hover:text-blue-800"
                                                       href="./index.html"
                                                   >
                                                       Already have an account? Login!
                                                   </a>
-                                              </div>
+                                              </div> */}
                                           </form>
                                       </div>
                                   </div>
@@ -142,6 +144,17 @@ function classNames(...classes) {
 }
 
 export default function MenuHeader() {
+
+  const [estaLogueado,setEstaLogueado] = useState(false)
+
+  const log_in = () => {
+    
+    setEstaLogueado(true)
+  }
+  const log_out = () => {
+    
+    setEstaLogueado(false)
+  }
 
   const modalRef = useRef()
 
@@ -197,17 +210,33 @@ export default function MenuHeader() {
                 </div>
               </div>
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                {/* <button className="bg-gray-800 p-1 rounded-full text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
-                  <ShoppingCartIcon className="h-6 w-6" aria-hidden="true" />
-                </button> */}
-                <button className="bg-transparent p-1">
-                  <span className="text-gray-300 hover:bg-gray-900 hover:text-white px-3 py-2 rounded-md text-sm font-normal">Ingresar</span>
-                </button>
-                <button onClick={()=> modalRef.current.open()} className="bg-transparent p-1">
-                  <span className="text-white hover:bg-green-600 px-3 py-2 rounded-md text-sm font-light bg-green-500 transition duration-200" 
-                  
-                  >Registrarse</span>
-                </button>
+                {
+                  estaLogueado
+                  ? <>
+                      <button className="p-1 focus:outline-none text-white mr-3">
+                        <ShoppingCartIcon className="h-6 w-6" aria-hidden="true" />
+                      </button>
+                      <div className="flex -space-x-2 mr-3">
+                        <img
+                          className="inline-block h-8 w-8 rounded-full cursor-pointer"
+                          src="https://res.cloudinary.com/proper/image/upload/v1616759463/p1_bgtwog.png"
+                          alt=""
+                        />
+                      </div>
+                    </>
+                  : <>
+                    <button className="bg-transparent p-1">
+                      <span className="text-gray-300 hover:bg-gray-900 hover:text-white px-3 py-2 rounded-md text-sm font-normal" onClick={log_in}>Ingresar</span>
+                    </button>
+                    <button onClick={()=> modalRef.current.open()} className="bg-transparent p-1">
+                     <span className="text-white hover:bg-green-600 px-3 py-2 rounded-md text-sm font-light bg-green-500 transition duration-200" 
+                    
+                      >Registrarse</span>
+                    </button>
+                
+                  </>
+
+                }
                 
                 {/* Profile dropdown */}
                 {/* <Menu as="div" className="ml-3 relative">
