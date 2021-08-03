@@ -3,7 +3,8 @@ import { Disclosure} from '@headlessui/react'
 import { MenuIcon, XIcon,ShoppingCartIcon } from '@heroicons/react/outline'
 import { NavLink } from 'react-router-dom'
 import { motion , AnimatePresence } from 'framer-motion'
-
+import { useDispatch,useSelector } from 'react-redux'
+import { closeSync } from 'fs'
 
 const navigation = [
   // { name: 'Programas', href: 'Programas', current: false },
@@ -145,6 +146,8 @@ function classNames(...classes) {
 
 export default function MenuHeader() {
 
+  const state = useSelector(state=>state)
+  const dispatch = useDispatch()
   const [estaLogueado,setEstaLogueado] = useState(false)
 
   const log_in = () => {
