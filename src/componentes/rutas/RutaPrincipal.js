@@ -1,8 +1,8 @@
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Footer from "../estaticos/Footer";
-import Home from "../estaticos/Home";
-import MenuHeader from "../estaticos/MenuHeader";
-import Programas from "../estaticos/Programas";
+import Footer       from "../estaticos/Footer";
+import Home         from "../estaticos/Home";
+import MenuHeader   from "../estaticos/MenuHeader";
+import Programas    from "../estaticos/Programas";
 
 export default function Rutas() {
     return (
@@ -13,7 +13,6 @@ export default function Rutas() {
                         <Route exact path="/" component={Home}/>
                         <Route exact path="/Programas" component={Programas}/>
                         {/* <Route exact path="/Programas" component={menuHeader}/> */}
-                        
                     </Switch>
                 <Footer/>
             </Router>
