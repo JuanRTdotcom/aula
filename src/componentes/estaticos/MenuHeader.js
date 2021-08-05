@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom'
 // import { DropMenuPerfil } from './dropdownMenu'
 
 import { useDispatch,useSelector } from 'react-redux'
-import { closeSync } from 'fs'
+// import { closeSync } from 'fs'
 import ModalLogin from '../modal/login'
 
 const navigation = [
@@ -21,8 +21,8 @@ function classNames(...classes) {
 
 export default function MenuHeader() {
 
-  const state = useSelector(state=>state)
-  const dispatch = useDispatch()
+  // const state = useSelector(state=>state)
+  // const dispatch = useDispatch()
   const [estaLogueado,setEstaLogueado] = useState(false)
   const [openModal,setOpenModal] = useState(false)
 
