@@ -8,7 +8,7 @@ import './index.css';
 
 ReactDOM.render(
   <Context.Provider value={{
-      stateUserLogin:1
+      stateUserLogin:3
       
   }}>    
     <React.StrictMode>

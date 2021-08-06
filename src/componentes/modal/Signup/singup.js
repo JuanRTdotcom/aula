@@ -19,9 +19,9 @@ export default function SingUp() {
 
   return (
     <>
-      <div className="px-8 mb-4 text-center">
-        <h3 className="pt-4 mb-2 text-2xl">Registrarse</h3>
-        <p className="mb-4 text-sm text-gray-700">
+      <div className="mb-4 text-center">
+        <h3 className="pt-4 my-2 mt-10 text-2xl" style={{fontSize:'50px',color:'#00E579'}}>Registrarse</h3>
+        <p className="mb-4 text-sm mt-6 text-gray-700">
           o registrarse mediante su email
         </p>
       </div>
@@ -97,19 +97,19 @@ export default function SingUp() {
         </div>
         <div className="mb-6 text-center">
           <button
-            className="w-full px-4 py-2 font-bold text-white bg-green-500 rounded-full hover:bg-green-700 focus:outline-none focus:shadow-outline"
-            type="button" onClick={setLogResource}
+            className="w-full px-4 py-2 font-bold text-white bg-green-500 rounded-md hover:bg-green-700 focus:outline-none focus:shadow-outline"
+            type="button"
           >
             Registrarse
           </button>
         </div>
         <div className="text-center">
-          <button
-            className="inline-block text-sm text-blue-500 align-baseline hover:text-blue-800"
-           
+          <a
+            className="inline-block text-sm text-green-400 align-baseline hover:text-green-500"
+            href="./index.html"
           >
-            Iniciar sesion
-          </button>
+            Iniciar Sesion
+          </a>
         </div>
         {/* <div className="text-center">
                                                   <a

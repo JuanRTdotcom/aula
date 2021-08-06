@@ -1,9 +1,10 @@
 export default function ForgotPassword(){
     return(
         <>
-            <div className="px-8 mb-4 text-center">
-        <h3 className="pt-4 mb-2 text-2xl">Restaurar contraseña</h3>
-        <p className="mb-4 text-sm text-gray-700">
+          
+      <div className="mb-4 text-center">
+        <h3 className="pt-4 my-2 mt-10 text-2xl" style={{fontSize:'50px',color:'#00E579',lineHeight:'1.1'}}>Restaurar Contraseña</h3>
+        <p className="mb-1 text-sm mt-6 text-gray-700">
         Ingresa el correo electrónico con el que te registraste
         y en breve te enviaremos un enlace para restaurar tu
         contraseña.
@@ -33,21 +34,21 @@ export default function ForgotPassword(){
             placeholder="E-mail"
           />
         </div>
-        <div className="text-center">
-          <a
-            className="inline-block text-sm text-blue-500 align-baseline hover:text-blue-800"
-            href="./index.html"
+        <div className="mb-6 text-center">
+          <button
+            className="w-full px-4 py-2 font-bold text-white bg-green-500 rounded-md hover:bg-green-700 focus:outline-none focus:shadow-outline"
+            type="button"
           >
-            ¿Olvidaste tu contraseña?
-          </a>
+            Restaurar
+          </button>
         </div>
         
         <div className="text-center">
           <a
-            className="inline-block text-sm text-blue-500 align-baseline hover:text-blue-800"
+            className="inline-block text-sm text-green-400 align-baseline hover:text-green-500"
             href="./index.html"
           >
-            Restaurar
+            Ingresar
           </a>
         </div>
         {/* <div className="text-center">

@@ -1,9 +1,9 @@
 export default function Signin() {
   return (
     <>
-      <div className="px-8 mb-4 text-center">
-        <h3 className="pt-4 mb-2 text-2xl">Iniciar Sesión</h3>
-        <p className="mb-4 text-sm text-gray-700">
+      <div className="mb-4 text-center">
+        <h3 className="pt-4 my-2 mt-10 text-2xl" style={{fontSize:'50px',color:'#00E579'}}>Iniciar Sesión</h3>
+        <p className="mb-4 text-sm mt-6 text-gray-700">
           o registrarse mediante su email
         </p>
       </div>
@@ -54,7 +54,7 @@ export default function Signin() {
             placeholder="Contraseña"
           />
         </div>
-        <div className="text-center">
+        <div className="text-center mb-6">
           <a
             className="inline-block text-sm text-blue-500 align-baseline hover:text-blue-800"
             href="./index.html"
@@ -64,16 +64,15 @@ export default function Signin() {
         </div>
         <div className="mb-6 text-center">
           <button
-            className="w-full px-4 py-2 font-bold text-white bg-green-500 rounded-full hover:bg-green-700 focus:outline-none focus:shadow-outline"
+            className="w-full px-4 py-2 font-bold text-white bg-green-500 rounded-md hover:bg-green-700 focus:outline-none focus:shadow-outline"
             type="button"
           >
             Ingresar
           </button>
         </div>
-        <hr className="mb-6 border-t" />
         <div className="text-center">
           <a
-            className="inline-block text-sm text-blue-500 align-baseline hover:text-blue-800"
+            className="inline-block text-sm text-green-400 align-baseline hover:text-green-500"
             href="./index.html"
           >
             Registrarse
