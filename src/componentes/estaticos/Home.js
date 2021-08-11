@@ -19,9 +19,12 @@ export default function Home(){
     return(
         <>
         
-        <section className="mx-auto w-100 flex items-center" style={{minHeight:'760px' ,backgroundImage:'url(https://res.cloudinary.com/proper/image/upload/v1626041274/aulavirtual/fondoproperaula_ixfx68.jpg)',backgroundPosition:'center center',backgroundSize: 'cover'}}>
-            
-        <motion.div
+        <section className="mx-auto w-100 flex items-center" style={{minHeight:'760px' ,background:'#141416',backgroundPosition:'center center',backgroundSize: 'cover'}}>
+        
+        <video loop autoPlay muted>
+          <source src="https://res.cloudinary.com/proper/video/upload/v1621613597/Trailers%20y%20V%C3%ADdeos/Trailer_de_Marca_Proper_zi5kk9.mp4" type="video/mp4" />
+          </video>
+        {/* <motion.div
                     initial={{
                         opacity:0
                     }}
@@ -33,7 +36,7 @@ export default function Home(){
                  className="container mx-auto text-proper px-2">
                     APRENDE CON <br></br>
                     LOS EXPERTOS
-                </motion.div>
+                </motion.div> */}
             
         </section>
         <section className="mx-auto w-100 pt-16 pb-20" style={{backgroundPosition:'center center',backgroundSize:'120% auto',backgroundImage:'#F2F2F2'}}>            
